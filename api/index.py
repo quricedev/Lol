@@ -1,1 +1,3 @@
-from downloader import handler
+import downloader
+
+handler = downloader.handler
