@@ -87,3 +87,19 @@ The API returns structured JSON with video and thumbnail links.
     ├── LICENSE
 
 ---
+
+## **Installation**
+
+*Install dependencies*
+
+    pip install -r requirements.txt
+
+---
+
+## **Run the Application**
+
+*Start the server locally*
+
+    python app/main.py
+            OR
+    python3 app/main.py
