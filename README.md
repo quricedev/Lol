@@ -17,19 +17,18 @@
 ---
 ## **Quick Navigation**
 
-[Overview](#overview)  [Features](#features)
+- [Overview](#overview)  
+- [Features](#features)  
+- [Where to Host](#where-to-host)  
+- [Project Structure](#project-structure)  
+- [Installation](#installation)  
+- [Run the Application](#run-the-application)  
+- [API Usage](#api-usage)  
+- [Example Request](#example-request)  
+- [Example Response](#example-response)  
+- [Notes](#notes)  
+- [License](#license)
 
-[Where to Host](#where-to-host)
-
-[Project Structure](#project-structure)  [Installation](#installation)
-
-[Run the Application](#run-the-application)
-
-[API Usage](#api-usage)  [Example Request](#example-request)
-
-[Example Response](#example-response)
-
-[Notes](#notes)  [License](#license)
 ---
 
 ## **Overview**
