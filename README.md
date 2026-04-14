@@ -67,3 +67,23 @@ The API returns structured JSON with video and thumbnail links.
 - For testing → **Localhost**
 
 ---
+
+## **Project Structure**
+
+*Organized for clarity and scalability*
+
+    insta-dl/
+    ├── app/
+    │   ├── __init__.py
+    │   ├── main.py
+    │   ├── routes/
+    │   │   └── downloader.py
+    │   ├── services/
+    │   │   └── scraper.py
+    │   └── utils/
+    │       └── headers.py
+    ├── requirements.txt
+    ├── README.md
+    ├── LICENSE
+
+---
