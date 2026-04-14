@@ -103,3 +103,28 @@ The API returns structured JSON with video and thumbnail links.
     python app/main.py
             OR
     python3 app/main.py
+---
+
+## **API Usage**
+
+*Endpoint*
+
+    GET /api/downloader?url=INSTAGRAM_URL
+
+---
+
+## **Example Request**
+
+    curl "http://localhost:5000/api/downloader?url=https://www.instagram.com/reel/ABCDEF1234/"
+
+---
+
+## **Example Response**
+
+{
+  "status": "success",
+  "data": {
+    "download": "video_url",
+    "thumbnail": "image_url"
+  }
+}
