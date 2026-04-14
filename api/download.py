@@ -1,8 +1,10 @@
+from flask import Flask, request, jsonify
 import requests
 from bs4 import BeautifulSoup
 import html
-import json
 from user_agent import generate_user_agent
+
+app = Flask(__name__)
 
 PROVIDER_URL = "https://snapdownloader.com/tools/instagram-reels-downloader/download"
 
@@ -11,18 +13,15 @@ def proxy(u):
     return u
 
 
-def handler(request):
-    url = request.query.get("url")
+@app.route("/api/downloader")
+def downloader():
+    url = request.args.get("url")
 
     if not url:
-        return (
-            400,
-            {"Content-Type": "application/json"},
-            json.dumps({
-                "status": "error",
-                "message": "url required"
-            }).encode()
-        )
+        return jsonify({
+            "status": "error",
+            "message": "url required"
+        }), 400
 
     try:
         headers = {
@@ -50,24 +49,19 @@ def handler(request):
         if not video:
             raise Exception()
 
-        return (
-            200,
-            {"Content-Type": "application/json"},
-            json.dumps({
-                "status": "success",
-                "data": {
-                    "download": proxy(video),
-                    "thumbnail": thumb
-                }
-            }).encode()
-        )
+        return jsonify({
+            "status": "success",
+            "data": {
+                "download": proxy(video),
+                "thumbnail": thumb
+            }
+        })
 
     except:
-        return (
-            500,
-            {"Content-Type": "application/json"},
-            json.dumps({
-                "status": "error",
-                "message": "failed to fetch"
-            }).encode()
-  )
+        return jsonify({
+            "status": "error",
+            "message": "failed to fetch"
+        }), 500
+
+
+app = app
