@@ -121,10 +121,10 @@ The API returns structured JSON with video and thumbnail links.
 
 ## **Example Response**
 
-{
-  "status": "success",
-  "data": {
-    "download": "video_url",
-    "thumbnail": "image_url"
-  }
-}
+    {
+      "status": "success",
+      "data": {
+        "download": "video_url",
+        "thumbnail": "image_url"
+      }
+    }
