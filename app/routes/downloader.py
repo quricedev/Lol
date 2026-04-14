@@ -1,11 +1,10 @@
 from flask import Blueprint, request, jsonify
-from app.services.scraper import fetch_video
+from app.services.scraper import scrape
 
-bp = Blueprint("downloader", __name__, url_prefix="/api")
+bp = Blueprint("downloader", __name__)
 
-
-@bp.route("/downloader")
-def downloader():
+@bp.route("/api/downloader", methods=["GET"])
+def run():
     url = request.args.get("url")
 
     if not url:
@@ -14,15 +13,15 @@ def downloader():
             "message": "url required"
         }), 400
 
-    result = fetch_video(url)
+    data = scrape(url)
 
-    if not result:
+    if not data:
         return jsonify({
             "status": "error",
-            "message": "failed to fetch media"
+            "message": "failed to fetch"
         }), 500
 
     return jsonify({
         "status": "success",
-        "data": result
+        "data": data
     })
