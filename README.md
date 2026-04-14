@@ -41,10 +41,10 @@ The API returns structured JSON with video and thumbnail links.
 *You can deploy this API on multiple platforms depending on your needs.*
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Localhost-Run%20Locally-dark-red?logo=linux" />
-  <img src="https://img.shields.io/badge/Render-Deploy-black?logo=render" />
-  <img src="https://img.shields.io/badge/Railway-Deploy-blue?logo=railway" />
-  <img src="https://img.shields.io/badge/Heroku-Cloud-pink?logo=heroku" />
+  <img src="https://img.shields.io/badge/Localhost-Run%20Locally-blue?logo=linux" />
+  <img src="https://img.shields.io/badge/Render-Deploy-green?logo=render" />
+  <img src="https://img.shields.io/badge/Railway-Deploy-black?logo=railway" />
+  <img src="https://img.shields.io/badge/Heroku-Cloud-purple?logo=heroku" />
   <img src="https://img.shields.io/badge/Cloudflare-Workers-orange?logo=cloudflare" />
   <img src="https://img.shields.io/badge/VPS-Ubuntu%2FServer-red?logo=ubuntu" />
 </p>
