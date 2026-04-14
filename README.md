@@ -128,3 +128,18 @@ The API returns structured JSON with video and thumbnail links.
         "thumbnail": "image_url"
       }
     }
+
+---
+## **Notes**
+
+*Important considerations*
+
+- This API uses an external provider for extraction  
+- Availability depends on provider response  
+- For production use, consider adding fallback logic
+
+---
+
+## **License**
+
+*This project is licensed under the MIT License.*
