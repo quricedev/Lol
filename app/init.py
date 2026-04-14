@@ -1,6 +1,6 @@
 from flask import Flask
 
-def create_app():
+def create():
     app = Flask(__name__)
 
     from app.routes.downloader import bp
